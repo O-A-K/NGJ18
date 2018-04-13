@@ -1,0 +1,6 @@
+GM Things
+
+ ~~~ Variables to track ~~~
+
+maxPowerUsage
+currentPowerUsage
