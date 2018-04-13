@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:NGJ_18/Assets/_Asset Store/JellyShader.meta
 guid: 002e462b5a623fd4cbb6cb5321d43ff4
 folderAsset: yes
 timeCreated: 1523647331
+=======
+guid: 05438d8bb3f87d04d8d6e6c5d1572058
+folderAsset: yes
+timeCreated: 1523647493
+>>>>>>> Stashed changes:NGJ_18/Assets/JB_Folder.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
