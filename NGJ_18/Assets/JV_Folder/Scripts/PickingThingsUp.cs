@@ -8,7 +8,7 @@ public class PickingThingsUp : MonoBehaviour
     public GameObject LookingAt;
     public GameObject WasLookingAt;
     [HideInInspector]
-    public bool IsLookingAtSomething = false;
+    public bool IsLookingAtSomething;
     [HideInInspector]
     public static Material[] No_Outline;
     private bool CarryingObject = false;
@@ -55,10 +55,9 @@ public class PickingThingsUp : MonoBehaviour
         //    }
         //}
         #endregion
-
         if (IsLookingAtSomething)
         {
-            LookingAt = this.transform.gameObject;
+            //LookingAt = this.transform.gameObject;
             //Debug.Log("I am looking at " + LookingAt);
             if (Input.GetKeyDown(KeyCode.L) && !CarryingObject)
             {
@@ -76,9 +75,8 @@ public class PickingThingsUp : MonoBehaviour
         }
         else if (!IsLookingAtSomething)
         {
-            GameObject temp = LookingAt;
-            WasLookingAt = temp;
-            //LookingAt = null;
+            //WasLookingAt = LookingAt;
+            LookingAt = null;
 
             //Debug.Log("I was looking at " + WasLookingAt);
         }
@@ -88,7 +86,7 @@ public class PickingThingsUp : MonoBehaviour
     {
         LookingAt = this.transform.gameObject;
         PC = Player.transform.gameObject;
-
+        WasLookingAt = null;
         IsLookingAtSomething = true;
     }
 
@@ -99,7 +97,9 @@ public class PickingThingsUp : MonoBehaviour
 
     void OnTriggerExit(Collider Player)
     {
+        WasLookingAt = this.transform.gameObject;
         IsLookingAtSomething = false;
+        LookingAt = null;
     }
 
 }

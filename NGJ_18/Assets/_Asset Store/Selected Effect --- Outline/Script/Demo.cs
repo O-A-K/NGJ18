@@ -5,7 +5,8 @@ public class Demo : MonoBehaviour
 {
 	public enum ETech { ET_NormalExpansion, ET_PostProcess };
 	public ETech m_Tech = ETech.ET_NormalExpansion;
-    public PickingThingsUp Player;
+    public PickingThingsUp Item;
+    public float flashingspeed;
 	[Header("Normal Expansion")]
 	// nothing parameters here, it is per object based.
 	
@@ -63,15 +64,22 @@ public class Demo : MonoBehaviour
 			m_PrevTech = m_Tech;
 		}
 
-        //if (Player.IsLookingAtSomething)
-        //{
-        //    Debug.Log("hi");
-        //    OnSelectedGameObjectChange(null,Player.LookingAt);
-        //}
-        //else
-        //{
-        //    OnSelectedGameObjectChange(Player.WasLookingAt, null);
-        //}
+        if (Item.IsLookingAtSomething)
+        {
+            //Debug.Log("hi");
+            OnSelectedGameObjectChange(null, Item.LookingAt);
+            float curve = Mathf.Sin(Time.time * flashingspeed);
+            m_GlowIntensity = curve / 0.5f + 5.0f;
+        }
+        else if (!Item.IsLookingAtSomething)
+        {
+            //Outline fx = Player.WasLookingAt.GetComponent<Outline>();
+            OnSelectedGameObjectChange(Item.WasLookingAt, null);
+            //if (fx)
+            //{
+            //    fx.OutlineDisable();
+            //}
+        }
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -218,7 +226,7 @@ public class Demo : MonoBehaviour
 		else if (m_Tech == ETech.ET_PostProcess)
 		{
 			if (prev != null)
-				prev.layer = LayerMask.NameToLayer ("Default");
+				prev.layer = 8;
 			if (curr != null)
 				curr.layer = LayerMask.NameToLayer (m_GlowLayerName);
 		}

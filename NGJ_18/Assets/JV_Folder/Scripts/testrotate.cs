@@ -11,6 +11,6 @@ public class testrotate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.Rotate(-Vector3.up * (60 * Time.deltaTime));
+        this.transform.Rotate(-Vector3.up * (20 * Time.deltaTime));
     }
 }
