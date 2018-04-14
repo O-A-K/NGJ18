@@ -13,8 +13,6 @@ public class JellyClickReceiver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         modelRenderer = GetComponent<MeshRenderer>();
-
-        InvokeRepeating("JellyWobble", 1, 1);
     }
 	
 	// Update is called once per frame
@@ -22,7 +20,7 @@ public class JellyClickReceiver : MonoBehaviour {
     {
         controlTime += Time.deltaTime;
 
-        /*if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -31,21 +29,14 @@ public class JellyClickReceiver : MonoBehaviour {
                 controlTime = 0;
 
                 modelRenderer.material.SetVector("_ModelOrigin", transform.position);
-                modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
+                //modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
+                modelRenderer.material.SetVector("_ImpactOrigin", new Vector3(0, 1, -10));
+
+                print(hit.point);
             }
         }
 
-        modelRenderer.material.SetFloat("_ControlTime", controlTime);*/
-	}
-
-    private void JellyWobble()
-    {
-        controlTime = 0;
-
-        modelRenderer.material.SetVector("_ModelOrigin", transform.position);
-        modelRenderer.material.SetVector("_ImpactOrigin", Vector3.zero);
-
         modelRenderer.material.SetFloat("_ControlTime", controlTime);
-    }
+	}
 
 }
