@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4433300738239908}
   - component: {fileID: 33770201330603756}
   - component: {fileID: 23929205113209442}
-  - component: {fileID: 114564881269397966}
   - component: {fileID: 135389943343570242}
   - component: {fileID: 143424056026102578}
   - component: {fileID: 54092668314128476}
   - component: {fileID: 195681070535450136}
+  - component: {fileID: 114334229433996336}
   - component: {fileID: 114791998883220476}
   m_Layer: 0
   m_Name: Blobby
@@ -169,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!81 &81524138807512310
 AudioListener:
@@ -178,7 +178,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381666805905250}
   m_Enabled: 1
---- !u!114 &114564881269397966
+--- !u!114 &114334229433996336
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -186,13 +186,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1172759962023612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6a6df342b52d24092cf6bbb590c535, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c9b16efbc4e4cd408c6d7610e3066ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 0.13
-  waveFrequency: 0.35
-  waveLength: 0.75
-  waveOriginPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114791998883220476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,10 +200,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f033fc16c153947abf6d0055b3486a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   isRigidbody: 0
   isCharacterController: 0
   isNavMesh: 1
+  agent: {fileID: 0}
+  speed: 5
+  drag: 0.5
+  isMoving: 0
 --- !u!124 &124274356406076360
 Behaviour:
   m_ObjectHideFlags: 1

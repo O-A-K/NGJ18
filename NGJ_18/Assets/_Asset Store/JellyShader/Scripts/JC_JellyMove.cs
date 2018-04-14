@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JellyClickReceiver : MonoBehaviour
+public class JC_JellyMove : MonoBehaviour
 {
     RaycastHit hit;
     Ray clickRay;
@@ -10,10 +10,18 @@ public class JellyClickReceiver : MonoBehaviour
     Renderer modelRenderer;
     float controlTime;
 
+    private JC_Move movement;
+
     // Use this for initialization
     void Start()
     {
         modelRenderer = GetComponent<MeshRenderer>();
+        movement = gameObject.GetComponent<JC_Move>();
+
+        if (movement == null)
+        {
+            print("No movement script found");
+        }
     }
 
     // Update is called once per frame
@@ -36,6 +44,17 @@ public class JellyClickReceiver : MonoBehaviour
                 print(hit.point);
             }
         }
+
+        //if (movement.isMoving)
+        //{
+        //    controlTime = 0;
+
+        //    modelRenderer.material.SetVector("_ModelOrigin", transform.position);
+        //    //modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
+        //    modelRenderer.material.SetVector("_ImpactOrigin", movement.agent.steeringTarget * 10);
+
+        //    print(movement.agent.steeringTarget * 10);
+        //}
 
         modelRenderer.material.SetFloat("_ControlTime", controlTime);
     }
