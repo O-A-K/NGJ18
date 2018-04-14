@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
+    [HideInInspector]
+    public Camera mainCamera;
     // Fader
     [SerializeField]
     RectTransform zoomer;
@@ -32,6 +34,10 @@ public class GameManager : MonoBehaviour
     AsyncOperation asyncLoad;
     [SerializeField]
     float minimumLoadingScreenTime;
+
+    // PCs
+    public JC_Move PlayerOne;
+    public JC_Move PlayerTwo;
 
     void Awake()
     {

@@ -16,8 +16,6 @@ public class JC_Move : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float drag;
 
-    private JC_PlayersManager manager;
-
     [HideInInspector] public bool isMovingOne;
     [HideInInspector] public bool isMovingTwo;
 
@@ -26,13 +24,12 @@ public class JC_Move : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        manager = FindObjectOfType<JC_PlayersManager>();
 
-        rb1 = manager.PlayerOne.GetComponent<Rigidbody>();
-        rb2 = manager.PlayerTwo.GetComponent<Rigidbody>();
+        rb1 = GameManager.gm.PlayerOne.GetComponent<Rigidbody>();
+        rb2 = GameManager.gm.PlayerTwo.GetComponent<Rigidbody>();
 
-        agent1 = manager.PlayerOne.GetComponent<NavMeshAgent>();
-        agent2 = manager.PlayerTwo.GetComponent<NavMeshAgent>();
+        agent1 = GameManager.gm.PlayerOne.GetComponent<NavMeshAgent>();
+        agent2 = GameManager.gm.PlayerTwo.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -43,7 +40,7 @@ public class JC_Move : MonoBehaviour
 
     private void GetInput()
     {
-        if (manager.PlayerOne)
+        if (GameManager.gm.PlayerOne)
         {
             if (Input.GetAxis("Horizontal1") > 0 || Input.GetAxis("Vertical1") > 0 || Input.GetAxis("Horizontal1") < 0 || Input.GetAxis("Vertical1") < 0)
             {
@@ -66,7 +63,7 @@ public class JC_Move : MonoBehaviour
             } 
         }
 
-        if (manager.PlayerTwo)
+        if (GameManager.gm.PlayerTwo)
         {
             if (Input.GetAxis("Horizontal2") > 0 || Input.GetAxis("Vertical2") > 0 || Input.GetAxis("Horizontal2") < 0 || Input.GetAxis("Vertical2") < 0)
             {
