@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43975633, g: 0.4881823, b: 0.56839883, a: 1}
+  m_IndirectSpecularColor: {r: 0.43975618, g: 0.488182, b: 0.56839836, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -913,11 +913,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f033fc16c153947abf6d0055b3486a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRigidbody: 1
-  isCharacterController: 0
-  isNavMesh: 0
+  rb1: {fileID: 0}
+  rb2: {fileID: 0}
+  agent1: {fileID: 0}
+  agent2: {fileID: 0}
   speed: 1
   drag: 0
+  isMovingOne: 0
+  isMovingTwo: 0
 --- !u!195 &522960215
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1703,11 +1706,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f033fc16c153947abf6d0055b3486a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRigidbody: 1
-  isCharacterController: 0
-  isNavMesh: 0
+  rb1: {fileID: 0}
+  rb2: {fileID: 0}
+  agent1: {fileID: 0}
+  agent2: {fileID: 0}
   speed: 1
   drag: 0
+  isMovingOne: 0
+  isMovingTwo: 0
 --- !u!195 &1404224228
 NavMeshAgent:
   m_ObjectHideFlags: 0

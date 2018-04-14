@@ -31,6 +31,19 @@ ModelImporter:
     100050: WallFurnish
     100052: WallFurnish_PipesDiagonal_
     100054: WallFurnish_PipeVertical_
+    100056: Ceiling
+    100058: CornerCeiling
+    100060: Cube_001
+    100062: Light
+    100064: LightHull
+    100066: Megaphone
+    100068: Monitor
+    100070: Switch
+    100072: SwitchBase
+    100074: SwitchLight
+    100076: Table
+    100078: Keyboard
+    100080: RailStart
     400000: //RootNode
     400002: Cart
     400004: CartGlassCylinder
@@ -59,11 +72,26 @@ ModelImporter:
     400050: WallFurnish
     400052: WallFurnish_PipesDiagonal_
     400054: WallFurnish_PipeVertical_
+    400056: Ceiling
+    400058: CornerCeiling
+    400060: Cube_001
+    400062: Light
+    400064: LightHull
+    400066: Megaphone
+    400068: Monitor
+    400070: Switch
+    400072: SwitchBase
+    400074: SwitchLight
+    400076: Table
+    400078: Keyboard
+    400080: RailStart
     2100000: unnamed
     2100002: Material_001
     2100004: Material
     2100006: Material_002
     2100008: Material_003
+    2100010: Material_005
+    2100012: Material_004
     2300000: Cart
     2300002: CartGlassCylinder
     2300004: CartRollers
@@ -91,6 +119,19 @@ ModelImporter:
     2300048: WallFurnish
     2300050: WallFurnish_PipesDiagonal_
     2300052: WallFurnish_PipeVertical_
+    2300054: Ceiling
+    2300056: CornerCeiling
+    2300058: Cube_001
+    2300060: Light
+    2300062: LightHull
+    2300064: Megaphone
+    2300066: Monitor
+    2300068: Switch
+    2300070: SwitchBase
+    2300072: SwitchLight
+    2300074: Table
+    2300076: Keyboard
+    2300078: RailStart
     3300000: Cart
     3300002: CartGlassCylinder
     3300004: CartRollers
@@ -118,6 +159,19 @@ ModelImporter:
     3300048: WallFurnish
     3300050: WallFurnish_PipesDiagonal_
     3300052: WallFurnish_PipeVertical_
+    3300054: Ceiling
+    3300056: CornerCeiling
+    3300058: Cube_001
+    3300060: Light
+    3300062: LightHull
+    3300064: Megaphone
+    3300066: Monitor
+    3300068: Switch
+    3300070: SwitchBase
+    3300072: SwitchLight
+    3300074: Table
+    3300076: Keyboard
+    3300078: RailStart
     4300000: Wall1
     4300002: Wall2
     4300004: Wall3
@@ -145,6 +199,19 @@ ModelImporter:
     4300048: WallFurnish_PipesDiagonal_
     4300050: WallFurnish
     4300052: WallFurnish_PipeVertical_
+    4300054: Cube_001
+    4300056: Monitor
+    4300058: Table
+    4300060: Megaphone
+    4300062: Light
+    4300064: LightHull
+    4300066: CornerCeiling
+    4300068: Ceiling
+    4300070: SwitchLight
+    4300072: Switch
+    4300074: SwitchBase
+    4300076: RailStart
+    4300078: Keyboard
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

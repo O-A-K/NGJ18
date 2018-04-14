@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 1fd7fd90c6fc02f4caa3cd22ec689dbb
+timeCreated: 1523729619
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: CameraRotator
+    100004: CameraSupport
+    100006: Cart
+    100008: CartGlassCylinder
+    100010: CartRollers
+    100012: Ceiling
+    100014: CornerCeiling
+    100016: Door
+    100018: GeneratorBase
+    100020: GeneratorBlock
+    100022: LaserKnobs
+    100024: lever
+    100026: leverStation
+    100028: Light
+    100030: //RootNode
+    100032: LightHull
+    100034: Piston
+    100036: PressurePlate
+    100038: RailCorner
+    100040: Scale
+    100042: Switch
+    100044: SwitchBase
+    100046: SwitchLight
+    100048: Wall1
+    100050: Wall2
+    100052: WallFurnish
+    100054: WallFurnish(PipesDiagonal)
+    100056: WallFurnish(PipeVertical)
+    400000: Camera
+    400002: CameraRotator
+    400004: CameraSupport
+    400006: Cart
+    400008: CartGlassCylinder
+    400010: CartRollers
+    400012: Ceiling
+    400014: CornerCeiling
+    400016: Door
+    400018: GeneratorBase
+    400020: GeneratorBlock
+    400022: LaserKnobs
+    400024: lever
+    400026: leverStation
+    400028: Light
+    400030: //RootNode
+    400032: LightHull
+    400034: Piston
+    400036: PressurePlate
+    400038: RailCorner
+    400040: Scale
+    400042: Switch
+    400044: SwitchBase
+    400046: SwitchLight
+    400048: Wall1
+    400050: Wall2
+    400052: WallFurnish
+    400054: WallFurnish(PipesDiagonal)
+    400056: WallFurnish(PipeVertical)
+    2100000: Material.003
+    2100002: Material.001
+    2100004: Material.002
+    2100006: Material
+    2100008: No Name
+    2300000: Camera
+    2300002: CameraRotator
+    2300004: CameraSupport
+    2300006: Cart
+    2300008: CartGlassCylinder
+    2300010: CartRollers
+    2300012: Ceiling
+    2300014: CornerCeiling
+    2300016: Door
+    2300018: GeneratorBase
+    2300020: GeneratorBlock
+    2300022: LaserKnobs
+    2300024: lever
+    2300026: leverStation
+    2300028: Light
+    2300030: LightHull
+    2300032: Piston
+    2300034: PressurePlate
+    2300036: RailCorner
+    2300038: Scale
+    2300040: Switch
+    2300042: SwitchBase
+    2300044: SwitchLight
+    2300046: Wall1
+    2300048: Wall2
+    2300050: WallFurnish
+    2300052: WallFurnish(PipesDiagonal)
+    2300054: WallFurnish(PipeVertical)
+    3300000: Camera
+    3300002: CameraRotator
+    3300004: CameraSupport
+    3300006: Cart
+    3300008: CartGlassCylinder
+    3300010: CartRollers
+    3300012: Ceiling
+    3300014: CornerCeiling
+    3300016: Door
+    3300018: GeneratorBase
+    3300020: GeneratorBlock
+    3300022: LaserKnobs
+    3300024: lever
+    3300026: leverStation
+    3300028: Light
+    3300030: LightHull
+    3300032: Piston
+    3300034: PressurePlate
+    3300036: RailCorner
+    3300038: Scale
+    3300040: Switch
+    3300042: SwitchBase
+    3300044: SwitchLight
+    3300046: Wall1
+    3300048: Wall2
+    3300050: WallFurnish
+    3300052: WallFurnish(PipesDiagonal)
+    3300054: WallFurnish(PipeVertical)
+    4300000: Light
+    4300002: LightHull
+    4300004: CornerCeiling
+    4300006: Ceiling
+    4300008: SwitchLight
+    4300010: Switch
+    4300012: SwitchBase
+    4300014: Piston
+    4300016: PressurePlate
+    4300018: Camera
+    4300020: CameraRotator
+    4300022: CameraSupport
+    4300024: LaserKnobs
+    4300026: WallFurnish(PipesDiagonal)
+    4300028: WallFurnish
+    4300030: WallFurnish(PipeVertical)
+    4300032: Wall1
+    4300034: Door
+    4300036: Wall2
+    4300038: RailCorner
+    4300040: CartGlassCylinder
+    4300042: CartRollers
+    4300044: Cart
+    4300046: GeneratorBlock
+    4300048: GeneratorBase
+    4300050: lever
+    4300052: leverStation
+    4300054: Scale
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
