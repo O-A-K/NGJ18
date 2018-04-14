@@ -341,12 +341,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f033fc16c153947abf6d0055b3486a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNavMesh: 1
   rb1: {fileID: 0}
   rb2: {fileID: 0}
   agent1: {fileID: 0}
   agent2: {fileID: 0}
-  speed: 3
+  speed: 1
   drag: 0.5
   isMovingOne: 0
   isMovingTwo: 0
@@ -591,12 +590,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f033fc16c153947abf6d0055b3486a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNavMesh: 1
   rb1: {fileID: 0}
   rb2: {fileID: 0}
   agent1: {fileID: 0}
   agent2: {fileID: 0}
-  speed: 3
+  speed: 1
   drag: 0.5
   isMovingOne: 0
   isMovingTwo: 0
