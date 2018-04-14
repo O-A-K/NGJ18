@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JC_Switch : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public bool isOn = false;
 
     public int player;
@@ -11,6 +12,11 @@ public class JC_Switch : MonoBehaviour
     public JB_DoorOpening doorOpening;
     private bool pc1IsInside;
     private bool pc2IsInside;
+=======
+    private Animator animator;
+    public bool isOn = false;
+    public GameObject objToDeactivate;
+>>>>>>> Stashed changes
 
     // Use this for initialization
     void Start()
@@ -18,6 +24,7 @@ public class JC_Switch : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     private void Update()
     {
         if (pc1IsInside || pc2IsInside)
@@ -29,10 +36,17 @@ public class JC_Switch : MonoBehaviour
                 doorOpening.DoorInteract();
             }
         }
+=======
+    // Update is called once per frame
+    void Update()
+    {
+
+>>>>>>> Stashed changes
     }
 
     private void OnTriggerEnter(Collider other)
     {
+<<<<<<< Updated upstream
         if (other.gameObject.layer == 9)
         {
             print("We're in");
@@ -69,6 +83,26 @@ public class JC_Switch : MonoBehaviour
             {
                 print("We're out 2");
                 pc2IsInside = false;
+=======
+        if (Input.GetButtonDown("A1"))
+        {
+            // Player1 Interacted with Trigger
+            if (other.GetComponent<JC_Move>() != null)
+            {
+                if (!isOn)
+                {
+                    isOn = true;
+
+                    animator.SetBool("isOpen", true);
+                }
+
+                else if (isOn)
+                {
+                    isOn = true;
+
+                    animator.SetBool("isOpen", false);
+                }
+>>>>>>> Stashed changes
             }
         }
     }
