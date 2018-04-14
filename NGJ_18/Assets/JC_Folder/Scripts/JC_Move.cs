@@ -55,9 +55,6 @@ public class JC_Move : MonoBehaviour
                 Vector3 movement = new Vector3(mH1, 0, mV1);
 
                 agent1.Move(movement * speed / 5);
-                //rb1.drag = drag;
-
-                print(new Vector3(mH1, 0, mV1));
             }
 
             else if (Input.GetAxis("Horizontal1") == 0 && Input.GetAxis("Vertical1") == 0)
@@ -78,9 +75,6 @@ public class JC_Move : MonoBehaviour
                 Vector3 movement = new Vector3(mH2, 0, mV2);
 
                 agent2.Move(movement * speed / 5);
-                //rb2.drag = drag;
-
-                print(new Vector3(mH2, 0, mV2));
             }
 
             else if (Input.GetAxis("Horizontal2") == 0 && Input.GetAxis("Vertical2") == 0)

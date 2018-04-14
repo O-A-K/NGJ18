@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class JC_Switch : MonoBehaviour
 {
-    private Animator animator;
     public bool isOn = false;
-    public GameObject objToDeactivate;
+
+    public int player;
+
+    public JB_DoorOpening doorOpening;
+    private bool pc1IsInside;
+    private bool pc2IsInside;
 
     // Use this for initialization
     void Start()
@@ -14,32 +18,57 @@ public class JC_Switch : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        if (pc1IsInside || pc2IsInside)
+        {
+            if (Input.GetButtonDown((player == 1 ? "A1" : "A2")))
+            {
+                print("Opened Door");
+                isOn = !isOn;
+                doorOpening.DoorInteract();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetButtonDown("A1"))
+        if (other.gameObject.layer == 9)
         {
-            // Player1 Interacted with Trigger
-            if (other.GetComponent<JC_Move>() != null)
+            print("We're in");
+
+            if (player == 1 && other.gameObject == GameManager.gm.PlayerOne.gameObject)
             {
-                if (!isOn)
-                {
-                    isOn = true;
+                print("We're in 1");
+                // Player1 Interacted with Trigger
+                pc1IsInside = true;             
+            }
 
-                    animator.SetBool("isOpen", true);
-                }
+            else if (player == 2 && other.gameObject == GameManager.gm.PlayerTwo.gameObject)
+            {
+                print("We're in 2");
+                pc2IsInside = true;
+            }
+        }
+    }
 
-                else if (isOn)
-                {
-                    isOn = true;
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 9)
+        {
+            print("We're out");
 
-                    animator.SetBool("isOpen", false);
-                }
+            if (player == 1 && other.gameObject == GameManager.gm.PlayerOne.gameObject)
+            {
+                print("We're out 1");
+                // Player1 Interacted with Trigger
+                pc1IsInside = false;
+            }
+
+            else if (player == 2 && other.gameObject == GameManager.gm.PlayerTwo.gameObject)
+            {
+                print("We're out 2");
+                pc2IsInside = false;
             }
         }
     }
