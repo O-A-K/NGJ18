@@ -6,6 +6,6 @@ public class Billboard : MonoBehaviour
 {
     void Update()
     {
-        transform.LookAt(GameManager.gm.mainCamera.transform.position);
+        transform.LookAt(-GameManager.gm.mainCamera.transform.position);
     }
 }

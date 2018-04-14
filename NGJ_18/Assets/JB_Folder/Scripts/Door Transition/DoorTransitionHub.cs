@@ -8,13 +8,14 @@ public class DoorTransitionHub : MonoBehaviour
     public DoorTransition door2;
 
     public int sceneIndex;
-    
+    public bool levelFinished = false;
 
 
     void Update()
     {
-        if (door1.pcReady && door2.pcReady) // if both PCs are ready
+        if (door1.pcReady && door2.pcReady && !levelFinished) // if both PCs are ready
         {
+            levelFinished = true;
             GameManager.gm.GoToScene(sceneIndex);
         }
     }
