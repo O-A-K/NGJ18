@@ -29,7 +29,7 @@ Material:
     m_Floats:
     - _OutlineBasedVertexColorR: 1
     - _OutlineFactor: 1
-    - _OutlineWidth: 0.005
+    - _OutlineWidth: 1
     - _Overlay: 0
     - _Transparent: 1
     m_Colors:

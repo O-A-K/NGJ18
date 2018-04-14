@@ -23,13 +23,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e9c9aba5c18a2bb4faa7c5c220dec360, type: 3}
+        m_Texture: {fileID: 2800000, guid: 32d0434bf47b7114c93e84d7e3d81de2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _OutlineBasedVertexColorR: 1
     - _OutlineFactor: 1
-    - _OutlineWidth: 0.005
+    - _OutlineWidth: 1
     - _Overlay: 0
     - _Transparent: 1
     m_Colors:
