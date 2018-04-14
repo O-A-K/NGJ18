@@ -1,17 +1,16 @@
 fileFormatVersion: 2
-guid: b3568f1b25f3668498d1a8685e7cfa10
+guid: 4ab36b1aa1109eb41a27995b66e98f67
+timeCreated: 1523713476
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.001
-    2100002: Material
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.002
-    4300002: Door
-    9500000: //RootNode
+    4300000: Cylinder
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
