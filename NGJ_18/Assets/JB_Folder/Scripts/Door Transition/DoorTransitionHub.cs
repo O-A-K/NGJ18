@@ -8,14 +8,19 @@ public class DoorTransitionHub : MonoBehaviour
     public DoorTransition door2;
 
     public int sceneIndex;
+    [HideInInspector]
     public bool levelFinished = false;
 
+    [Header("Audio")]
+    public AudioSource leavingLevelSFX;
 
     void Update()
     {
         if (door1.pcReady && door2.pcReady && !levelFinished) // if both PCs are ready
         {
             levelFinished = true;
+            AudioSource sfx = Instantiate(leavingLevelSFX, GameManager.gm.transform);
+            Destroy(sfx.gameObject, 10);
             GameManager.gm.GoToScene(sceneIndex);
         }
     }
