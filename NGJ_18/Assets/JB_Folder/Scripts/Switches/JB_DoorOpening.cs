@@ -51,6 +51,7 @@ public class JB_DoorOpening : MonoBehaviour
             {
                 transform.position = Vector3.LerpUnclamped(openPosition.position, closedPosition.position, closingMotion.Evaluate(progress));
             }
+
             else
             {
                 transform.position = Vector3.LerpUnclamped(closedPosition.position, openPosition.position, openingMotion.Evaluate(progress));

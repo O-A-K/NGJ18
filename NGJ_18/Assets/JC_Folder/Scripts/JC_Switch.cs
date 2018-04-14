@@ -29,47 +29,29 @@ public class JC_Switch : MonoBehaviour
                 doorOpening.DoorInteract();
             }
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 9)
+
+        if (Vector3.Distance(GameManager.gm.PlayerOne.gameObject.transform.position, gameObject.transform.position) <= 2)
         {
-            print("We're in");
-
-            if (player == 1 && other.gameObject == GameManager.gm.PlayerOne.gameObject)
-            {
-                print("We're in 1");
-                // Player1 Interacted with Trigger
-                pc1IsInside = true;
-            }
-
-            else if (player == 2 && other.gameObject == GameManager.gm.PlayerTwo.gameObject)
-            {
-                print("We're in 2");
-                pc2IsInside = true;
-            }
+            print("We're in 1");
+            // Player1 Interacted with Trigger
+            pc1IsInside = true;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == 9)
+        else
         {
-            print("We're out");
+            pc1IsInside = false;
+        }
 
-            if (player == 1 && other.gameObject == GameManager.gm.PlayerOne.gameObject)
-            {
-                print("We're out 1");
-                // Player1 Interacted with Trigger
-                pc1IsInside = false;
-            }
 
-            else if (player == 2 && other.gameObject == GameManager.gm.PlayerTwo.gameObject)
-            {
-                print("We're out 2");
-                pc2IsInside = false;
-            }
+        if (Vector3.Distance(GameManager.gm.PlayerTwo.gameObject.transform.position, gameObject.transform.position) <= 2)
+        {
+            print("We're in 2");
+            // Player1 Interacted with Trigger
+            pc2IsInside = true;
+        }
+        else
+        {
+            pc2IsInside = false;
         }
     }
 }
