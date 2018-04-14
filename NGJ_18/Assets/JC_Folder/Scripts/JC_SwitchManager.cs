@@ -6,7 +6,7 @@ public class JC_SwitchManager : MonoBehaviour
 {
     [SerializeField] private List<JC_Switch> allSwiches = new List<JC_Switch>();
     public int breakingPoint;
-    int onCounter;
+    public int onCounter;
 
     // Use this for initialization
     void Start()
@@ -19,7 +19,16 @@ public class JC_SwitchManager : MonoBehaviour
     {
         if (onCounter >= breakingPoint)
         {
-            //SHIT HAPPENS
+            print("Breaking point");
+
+            foreach (JC_Switch Switch in allSwiches)
+            {
+
+                Switch.isOn = false;
+                Switch.HasBroken();
+
+            }
+            onCounter = 0;
         }
     }
 

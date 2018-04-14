@@ -8,14 +8,18 @@ public class JC_Switch : MonoBehaviour
 
     public int player;
 
+    public float breakerDelay = 1;
+
     public JB_DoorOpening doorOpening;
     private bool pc1IsInside;
     private bool pc2IsInside;
 
+    private JC_SwitchManager switchManager;
+
     // Use this for initialization
     void Start()
     {
-
+        switchManager = FindObjectOfType<JC_SwitchManager>();
     }
 
     private void Update()
@@ -26,10 +30,10 @@ public class JC_Switch : MonoBehaviour
             {
                 print("Opened Door");
                 isOn = !isOn;
-                doorOpening.DoorInteract();
+                DoorInteract();
+                switchManager.AddOnSwitch();
             }
         }
-
 
         if (Vector3.Distance(GameManager.gm.PlayerOne.gameObject.transform.position, gameObject.transform.position) <= 2)
         {
@@ -37,6 +41,7 @@ public class JC_Switch : MonoBehaviour
             // Player1 Interacted with Trigger
             pc1IsInside = true;
         }
+
         else
         {
             pc1IsInside = false;
@@ -53,5 +58,14 @@ public class JC_Switch : MonoBehaviour
         {
             pc2IsInside = false;
         }
+
+    }
+    void DoorInteract()
+    {
+        doorOpening.DoorInteract();
+    }
+    public void HasBroken()
+    {
+        Invoke("DoorInteract", breakerDelay);
     }
 }

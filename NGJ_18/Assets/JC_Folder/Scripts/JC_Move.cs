@@ -82,5 +82,7 @@ public class JC_Move : MonoBehaviour
                 isMovingTwo = false;
             }
         }
+
+        
     }
 }

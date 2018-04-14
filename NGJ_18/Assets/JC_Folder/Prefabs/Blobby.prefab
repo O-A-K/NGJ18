@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 135389943343570242}
   - component: {fileID: 54092668314128476}
   - component: {fileID: 195681070535450136}
-  - component: {fileID: 114334229433996336}
   - component: {fileID: 114791998883220476}
   m_Layer: 9
   m_Name: Blobby
@@ -102,17 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &114334229433996336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172759962023612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9b16efbc4e4cd408c6d7610e3066ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114791998883220476
 MonoBehaviour:
   m_ObjectHideFlags: 1
