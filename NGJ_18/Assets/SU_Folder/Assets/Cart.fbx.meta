@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: d116d641852c33343965c73684b501ed
+timeCreated: 1523708219
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cube
+    100004: Cube.001
+    100006: Cylinder
+    100008: GeneratorBase
+    100010: GeneratorBlock
+    100012: lever
+    100014: leverStation
+    100016: Rail
+    100018: Scale
+    100020: Cart
+    100022: CartGlassCylinder
+    100024: CartRollers
+    400000: //RootNode
+    400002: Cube
+    400004: Cube.001
+    400006: Cylinder
+    400008: GeneratorBase
+    400010: GeneratorBlock
+    400012: lever
+    400014: leverStation
+    400016: Rail
+    400018: Scale
+    400020: Cart
+    400022: CartGlassCylinder
+    400024: CartRollers
+    2100000: Material.003
+    2100002: Material.001
+    2100004: Material.002
+    2100006: Material
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cylinder
+    2300006: GeneratorBase
+    2300008: GeneratorBlock
+    2300010: lever
+    2300012: leverStation
+    2300014: Rail
+    2300016: Scale
+    2300018: Cart
+    2300020: CartGlassCylinder
+    2300022: CartRollers
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cylinder
+    3300006: GeneratorBase
+    3300008: GeneratorBlock
+    3300010: lever
+    3300012: leverStation
+    3300014: Rail
+    3300016: Scale
+    3300018: Cart
+    3300020: CartGlassCylinder
+    3300022: CartRollers
+    4300000: Cylinder
+    4300002: Cube.001
+    4300004: Cube
+    4300006: GeneratorBlock
+    4300008: GeneratorBase
+    4300010: lever
+    4300012: leverStation
+    4300014: Rail
+    4300016: Scale
+    4300018: CartGlassCylinder
+    4300020: CartRollers
+    4300022: Cart
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
