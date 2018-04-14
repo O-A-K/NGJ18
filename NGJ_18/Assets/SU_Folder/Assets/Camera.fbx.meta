@@ -1,49 +1,29 @@
 fileFormatVersion: 2
-guid: 7b3b7fd32b4f66f4aa2548e747cafede
+guid: f8f399f24f115b949bc2f6a230cf98d9
+timeCreated: 1523714586
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Power1
-    100002: Power2
-    100004: Power3
-    100006: Power4
-    100008: PowerBoard
-    100010: //RootNode
-    100012: Lever
-    100014: LeverBase
-    400000: Power1
-    400002: Power2
-    400004: Power3
-    400006: Power4
-    400008: PowerBoard
-    400010: //RootNode
-    400012: Lever
-    400014: LeverBase
-    2100000: Material.003
-    2100002: Material.002
-    2100004: Material.001
-    2300000: Power1
-    2300002: Power2
-    2300004: Power3
-    2300006: Power4
-    2300008: PowerBoard
-    2300010: Lever
-    2300012: LeverBase
-    3300000: Power1
-    3300002: Power2
-    3300004: Power3
-    3300006: Power4
-    3300008: PowerBoard
-    3300010: Lever
-    3300012: LeverBase
-    4300000: Power2
-    4300002: Power1
-    4300004: Power4
-    4300006: Power3
-    4300008: PowerBoard
-    4300010: Lever
-    4300012: LeverBase
-    9500000: //RootNode
+    100000: //RootNode
+    100002: Camera
+    100004: CameraRotator
+    100006: CameraSupport
+    400000: //RootNode
+    400002: Camera
+    400004: CameraRotator
+    400006: CameraSupport
+    2100000: Material
+    2100002: Material.001
+    2300000: Camera
+    2300002: CameraRotator
+    2300004: CameraSupport
+    3300000: Camera
+    3300002: CameraRotator
+    3300004: CameraSupport
+    4300000: Camera
+    4300002: CameraRotator
+    4300004: CameraSupport
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -118,7 +98,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
