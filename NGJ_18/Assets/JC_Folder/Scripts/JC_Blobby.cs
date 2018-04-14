@@ -40,21 +40,22 @@ public class JC_Blobby : MonoBehaviour
 
                 modelRenderer.material.SetVector("_ModelOrigin", transform.position);
                 //modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
-                modelRenderer.material.SetVector("_ImpactOrigin", new Vector3(1, 0, -10));
+                modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
 
                 //new Vector3(0, 1, -10)
 
                 print(hit.point);
             }
+            modelRenderer.material.SetFloat("_ControlTime", controlTime);
         }
 
         if (movement.isMovingOne)
         {
-            controlTime = 0;
+            if (controlTime <= 5)controlTime = 0;
 
             modelRenderer.material.SetVector("_ModelOrigin", transform.position);
             //modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
-            modelRenderer.material.SetVector("_ImpactOrigin", new Vector3(Mathf.Clamp(movement.agent1.steeringTarget.x, -10, 10), 0, Mathf.Clamp(movement.agent1.steeringTarget.z, -10, 10)));
+            modelRenderer.material.SetVector("_ImpactOrigin", new Vector3(Mathf.Clamp(movement.agent1.steeringTarget.x, -50, 50), 0, Mathf.Clamp(movement.agent1.steeringTarget.z/1.1f, -50, 50)));
 
             print(movement.agent1.steeringTarget);
         }

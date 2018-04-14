@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -752,9 +752,36 @@ Prefab:
       propertyPath: m_Name
       value: BlobbyOne
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23929205113209442, guid: 2a967fc441f49094bac38c1a22551801,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e20463e1312b8f43b99301c132f0122, type: 2}
+    - target: {fileID: 114791998883220476, guid: 2a967fc441f49094bac38c1a22551801,
+        type: 2}
+      propertyPath: speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114334229433996336, guid: 2a967fc441f49094bac38c1a22551801, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2a967fc441f49094bac38c1a22551801, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1739304281 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172759962023612, guid: 2a967fc441f49094bac38c1a22551801,
+    type: 2}
+  m_PrefabInternal: {fileID: 1732276869}
+--- !u!114 &1739304282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739304281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0531a0da97bc14e901d80f11f0becb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1899825503
 Prefab:
   m_ObjectHideFlags: 0

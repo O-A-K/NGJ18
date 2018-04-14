@@ -31,9 +31,9 @@ public class JellyClickReceiver : MonoBehaviour
 
                 modelRenderer.material.SetVector("_ModelOrigin", transform.position);
                 //modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
-                modelRenderer.material.SetVector("_ImpactOrigin", new Vector3(0, 1, -10));
+                modelRenderer.material.SetVector("_ImpactOrigin", hit.point);
 
-                //print(hit.point);
+                print(hit.point);
             }
         }
 
