@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: pipe_outline
-  m_Shader: {fileID: 4800000, guid: ecaa87dd3acaafc4fa05f757304e9b6a, type: 3}
-  m_ShaderKeywords: _OUTLINEBASEDVERTEXCOLORR_ON
+  m_Shader: {fileID: 4800000, guid: 2777f54c529909d44a0738a871071b29, type: 3}
+  m_ShaderKeywords: _OUTLINEBASEDVERTEXCOLORR_ON _OUTLINEWRITEZ_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,6 +30,7 @@ Material:
     - _OutlineBasedVertexColorR: 1
     - _OutlineFactor: 1
     - _OutlineWidth: 1
+    - _OutlineWriteZ: 1
     - _Overlay: 0
     - _Transparent: 1
     m_Colors:

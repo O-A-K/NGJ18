@@ -5,7 +5,7 @@ public class Demo : MonoBehaviour
 {
 	public enum ETech { ET_NormalExpansion, ET_PostProcess };
 	public ETech m_Tech = ETech.ET_NormalExpansion;
-	
+    public PickingThingsUp Player;
 	[Header("Normal Expansion")]
 	// nothing parameters here, it is per object based.
 	
@@ -62,29 +62,39 @@ public class Demo : MonoBehaviour
 			}
 			m_PrevTech = m_Tech;
 		}
-		
-		//if (Input.GetMouseButton (1))
-		//{
-			//RaycastHit hit;
-			//Ray ray = m_Camera.ScreenPointToRay (Input.mousePosition);       
-   //         if (Physics.Raycast(ray, out hit))
-   //         {
-   //         if (hit.transform.gameObject.layer == 19)
-   //         {
-   //             if (m_PrevMouseOn != hit.transform.gameObject)
-   //                 OnSelectedGameObjectChange(m_PrevMouseOn, hit.transform.gameObject);
-   //             m_PrevMouseOn = hit.transform.gameObject;
-   //         }
-   //         else
-   //         {
-   //             OnSelectedGameObjectChange(m_PrevMouseOn, null);
-   //             m_PrevMouseOn = null;
-   //         }
-   //         }
-		//}
-		
-		// different tech use different logic
-		if (m_Tech == ETech.ET_NormalExpansion)
+
+        //if (Player.IsLookingAtSomething)
+        //{
+        //    Debug.Log("hi");
+        //    OnSelectedGameObjectChange(null,Player.LookingAt);
+        //}
+        //else
+        //{
+        //    OnSelectedGameObjectChange(Player.WasLookingAt, null);
+        //}
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            RaycastHit hit;
+            Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.layer == 8)
+                {
+                    if (m_PrevMouseOn != hit.transform.gameObject)
+                        OnSelectedGameObjectChange(m_PrevMouseOn, hit.transform.gameObject);
+                    m_PrevMouseOn = hit.transform.gameObject;
+                }
+                else
+                {
+                    OnSelectedGameObjectChange(m_PrevMouseOn, null);
+                    m_PrevMouseOn = null;
+                }
+            }
+        }
+
+        // different tech use different logic
+        if (m_Tech == ETech.ET_NormalExpansion)
 		{
 			if (m_PrevMouseOn)
 			{
@@ -181,10 +191,10 @@ public class Demo : MonoBehaviour
 			RenderTexture.ReleaseTemporary (rt1);
 		}
 	}
-	void OnGUI ()
-	{
-		GUI.Box (new Rect (10, 10, 260, 25), "Selected Effect --- Outline Demo");
-	}
+	//void OnGUI ()
+	//{
+	//	GUI.Box (new Rect (10, 10, 260, 25), "Selected Effect --- Outline Demo");
+	//}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	void OutlineApply (GameObject prev, GameObject curr)
 	{

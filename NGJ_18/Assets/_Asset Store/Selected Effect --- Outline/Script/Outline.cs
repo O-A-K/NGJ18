@@ -23,7 +23,7 @@ public class Outline : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine("Initialize");
+        StartCoroutine("Initialize");
     }
 
     private void Update()
