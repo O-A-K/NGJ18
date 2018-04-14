@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
-    [HideInInspector]
     public Camera mainCamera;
     // Fader
     [SerializeField]
@@ -56,10 +55,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeScreen());
     }
 
-    //void Update()
-    //{
-
-    //}
 
 
 
