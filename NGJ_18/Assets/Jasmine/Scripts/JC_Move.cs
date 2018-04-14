@@ -5,15 +5,16 @@ using UnityEngine.AI;
 
 public class JC_Move : MonoBehaviour
 {
-    public float speed;
-
-    public bool isRigidbody;
-    public bool isCharacterController;
-    public bool isNavMesh;
+    [SerializeField] private bool isRigidbody;
+    [SerializeField] private bool isCharacterController;
+    [SerializeField] private bool isNavMesh = true;
 
     private Rigidbody rb;
     private CharacterController cc;
     private NavMeshAgent agent;
+
+    [SerializeField] private float speed;
+    [SerializeField] private float drag;
 
     // Use this for initialization
     private void Start()
@@ -64,6 +65,7 @@ public class JC_Move : MonoBehaviour
             Vector3 movement = new Vector3(mH, 0, mV);
 
             agent.Move(movement * speed / 5);
+            rb.drag = drag;
         }
     }
 
