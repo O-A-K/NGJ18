@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: b3568f1b25f3668498d1a8685e7cfa10
-timeCreated: 1523711028
-=======
-guid: 0504f30761a4e7e43a6c959ea76b7617
-timeCreated: 1523711635
->>>>>>> Stashed changes
+guid: 2eb29cc8cbc6fd14989004e584ada4dc
+timeCreated: 1523711937
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -13,10 +8,9 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Material.001
-    2100002: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.002
+    4300000: WallFurnish(PipeVertical)
   externalObjects: {}
   materials:
     importMaterials: 1
