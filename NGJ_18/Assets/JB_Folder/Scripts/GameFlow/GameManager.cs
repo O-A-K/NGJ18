@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
     public JC_Move PlayerOne;
     public JC_Move PlayerTwo;
 
+    // Audio
+    [Header("Audio")]
+    public AudioSource screenFadeSFX;
+    public AudioSource arrivingLevelSFX;
+
     void Awake()
     {
         if (gm)
@@ -63,7 +68,6 @@ public class GameManager : MonoBehaviour
         // Go to loading Screen
         // Start async loading
         // Once done / after 2 seconds go to new scene
-
         StartCoroutine(LoadSceneCoroutine(sceneIndex));
     }
 
@@ -78,10 +82,10 @@ public class GameManager : MonoBehaviour
             fadeTime += Time.deltaTime;
             yield return null;
         }
-        
+
         SceneManager.LoadScene(1);                      // go to loading screen
         currentScene = 1;
-        
+
         inTransition = true;
         StartCoroutine(FadeScreen());                   // fade in to loading screen
         while (inTransition)                            // wait for loading to screen fade in then begin checking progress of level load
@@ -110,12 +114,21 @@ public class GameManager : MonoBehaviour
         }
 
         currentScene = sceneIndex;
+
+        if (currentScene > 1)
+        {
+            //AudioSource sfx = Instantiate(arrivingLevelSFX, transform);
+            //Destroy(sfx.gameObject, 10);
+        }
         inTransition = true;                            // fade into new scene
         StartCoroutine(FadeScreen());
     }
 
     IEnumerator FadeScreen()
     {
+        AudioSource fade = Instantiate(screenFadeSFX, transform);
+        fade.PlayDelayed(hasFadedIn ? 0 : .2f);
+        Destroy(fade.gameObject, 1);
         float progress = fadeTime = 0;
         fadeLength = hasFadedIn ? fadeOutLength : fadeInLength;
         startSize = hasFadedIn ? new Vector3(0, 0, 1) : new Vector3(75, 75, 1);
@@ -131,7 +144,7 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
-        
+
         hasFadedIn = !hasFadedIn;
         if (hasFadedIn) zoomer.gameObject.SetActive(false);
 

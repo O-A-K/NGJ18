@@ -328,6 +328,8 @@ MonoBehaviour:
   door2: {fileID: 114300147399778084}
   sceneIndex: 0
   levelFinished: 0
+  leavingLevelSFX: {fileID: 82953490727384902, guid: 9b15ec7fbc83cf54f865de3cb39a0f40,
+    type: 2}
 --- !u!114 &114990738275514292
 MonoBehaviour:
   m_ObjectHideFlags: 1
