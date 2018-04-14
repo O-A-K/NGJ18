@@ -23,7 +23,17 @@ public class Outline : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine("Initialize");
+        //StartCoroutine("Initialize");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            StartCoroutine("Initialize");
+            Debug.Log("started this thing");
+        }
+        
     }
 
     IEnumerator Initialize ()

@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ZombunnyBodyTrans
+  m_Name: ZombunnyBodyTrans 1
   m_Shader: {fileID: 4800000, guid: ecaa87dd3acaafc4fa05f757304e9b6a, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _OUTLINEBASEDVERTEXCOLORR_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -18,16 +18,21 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 24388afd57dafc042a07323fafb1b22d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fb037c7b29046d9498cdace8ee042a71, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _OutlineBasedVertexColorR: 0
+    - _OutlineBasedVertexColorR: 1
     - _OutlineFactor: 1
-    - _OutlineWidth: 0.1
+    - _OutlineWidth: 0.005
     - _Overlay: 0
-    - _Transparent: 0.5
+    - _Transparent: 1
     m_Colors:
-    - _OutlineColor: {r: 0, g: 1, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 1, b: 0.048275948, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 0, a: 1}
