@@ -32,14 +32,14 @@ public class PickingThingsUp : MonoBehaviour
                     hit.transform.gameObject.GetComponent<Renderer>().materials[i] = temp;
                     temp = outline;
                 }
-                if (Input.GetKeyDown(KeyCode.F) && !CarryingObject)
+                if (Input.GetKeyDown(KeyCode.L) && !CarryingObject)
                 {
                     Debug.Log("Picked up");
                     CarryingObject = true;
                     hit.transform.parent = this.transform;
                     CarriedObject = hit.transform.gameObject;
                 }
-                else if (Input.GetKeyDown(KeyCode.F) && CarryingObject)
+                else if (Input.GetKeyDown(KeyCode.L) && CarryingObject)
                 {
                     Debug.Log("Dropped Object");
                     CarryingObject = false;
