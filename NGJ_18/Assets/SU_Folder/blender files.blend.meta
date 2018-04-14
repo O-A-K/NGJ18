@@ -1,82 +1,43 @@
 fileFormatVersion: 2
-guid: 7b3b7fd32b4f66f4aa2548e747cafede
+guid: 2cb74d98b3f0f97408a25ef31d90e2ae
+timeCreated: 1523706726
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-<<<<<<< Updated upstream
-    100000: Power1
-    100002: Power2
-    100004: Power3
-    100006: Power4
-    100008: PowerBoard
-    100010: //RootNode
-    400000: Power1
-    400002: Power2
-    400004: Power3
-    400006: Power4
-    400008: PowerBoard
-    400010: //RootNode
-    2100000: Material.003
-    2100002: Material.002
-    2100004: Material.001
-    2300000: Power1
-    2300002: Power2
-    2300004: Power3
-    2300006: Power4
-    2300008: PowerBoard
-    3300000: Power1
-    3300002: Power2
-    3300004: Power3
-    3300006: Power4
-    3300008: PowerBoard
-    4300000: Power2
-    4300002: Power1
-    4300004: Power4
-    4300006: Power3
-    4300008: PowerBoard
-    9500000: //RootNode
-=======
-    100000: Cube
-    100002: Cylinder
-    100004: //RootNode
-    100006: Power1
-    100008: Power2
-    100010: Power3
-    100012: Power4
-    100014: PowerBoard
-    400000: Cube
-    400002: Cylinder
-    400004: //RootNode
-    400006: Power1
-    400008: Power2
-    400010: Power3
-    400012: Power4
-    400014: PowerBoard
-    2100000: Material.001
-    2100002: Material.002
-    2100004: Material.003
+    100000: //RootNode
+    100002: Cube
+    100004: lever
+    100006: leverStation
+    100008: Rail
+    100010: Scale
+    400000: //RootNode
+    400002: Cube
+    400004: lever
+    400006: leverStation
+    400008: Rail
+    400010: Scale
+    2100000: unnamed
+    2100002: Material_001
+    2100004: Material_002
+    2100006: Material_003
     2300000: Cube
-    2300002: Cylinder
-    2300004: Power1
-    2300006: Power2
-    2300008: Power3
-    2300010: Power4
-    2300012: PowerBoard
+    2300002: lever
+    2300004: leverStation
+    2300006: Rail
+    2300008: Scale
     3300000: Cube
-    3300002: Cylinder
-    3300004: Power1
-    3300006: Power2
-    3300008: Power3
-    3300010: Power4
-    3300012: PowerBoard
-    4300000: Cylinder
-    4300002: Cube
-    4300004: Power2
-    4300006: Power1
-    4300008: Power4
-    4300010: Power3
-    4300012: PowerBoard
->>>>>>> Stashed changes
+    3300002: lever
+    3300004: leverStation
+    3300006: Rail
+    3300008: Scale
+    4300000: Cube
+    4300002: lever
+    4300004: leverStation
+    4300006: Rail
+    4300008: Scale
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
