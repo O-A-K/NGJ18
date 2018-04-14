@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: b3568f1b25f3668498d1a8685e7cfa10
+=======
+guid: a740eee9ad983b942b45757f556fef99
+timeCreated: 1523712458
+licenseType: Pro
+>>>>>>> Stashed changes
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,8 +16,14 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.002
+<<<<<<< Updated upstream
     4300002: Door
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
     9500000: //RootNode
+=======
+>>>>>>> Stashed changes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +98,11 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< Updated upstream
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> Stashed changes
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
