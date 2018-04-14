@@ -1,25 +1,39 @@
 fileFormatVersion: 2
 guid: 7b3b7fd32b4f66f4aa2548e747cafede
-timeCreated: 1523705136
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cylinder
-    100004: //RootNode
-    400000: Cube
-    400002: Cylinder
-    400004: //RootNode
-    2100000: Material.001
+    100000: Power1
+    100002: Power2
+    100004: Power3
+    100006: Power4
+    100008: PowerBoard
+    100010: //RootNode
+    400000: Power1
+    400002: Power2
+    400004: Power3
+    400006: Power4
+    400008: PowerBoard
+    400010: //RootNode
+    2100000: Material.003
     2100002: Material.002
-    2100004: Material.003
-    2300000: Cube
-    2300002: Cylinder
-    3300000: Cube
-    3300002: Cylinder
-    4300000: Cylinder
-    4300002: Cube
+    2100004: Material.001
+    2300000: Power1
+    2300002: Power2
+    2300004: Power3
+    2300006: Power4
+    2300008: PowerBoard
+    3300000: Power1
+    3300002: Power2
+    3300004: Power3
+    3300006: Power4
+    3300008: PowerBoard
+    4300000: Power2
+    4300002: Power1
+    4300004: Power4
+    4300006: Power3
+    4300008: PowerBoard
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -94,7 +108,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: hadle_outline
+  m_Name: glass_outline
   m_Shader: {fileID: 4800000, guid: ecaa87dd3acaafc4fa05f757304e9b6a, type: 3}
   m_ShaderKeywords: _OUTLINEBASEDVERTEXCOLORR_ON
   m_LightmapFlags: 5
