@@ -25,6 +25,8 @@ public class JB_DoorOpening : MonoBehaviour
 
     public GameObject doorBlock;
 
+    public ParticleSystem electricShock;
+
     void Start()
     {
         transform.position = isOpen ? openPosition.position : closedPosition.position;
