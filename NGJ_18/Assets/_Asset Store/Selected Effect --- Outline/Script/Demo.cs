@@ -5,7 +5,7 @@ public class Demo : MonoBehaviour
 {
 	public enum ETech { ET_NormalExpansion, ET_PostProcess };
 	public ETech m_Tech = ETech.ET_NormalExpansion;
-    public PickingThingsUp Item;
+    public PickingThingsUp[] Item;
     public float flashingspeed;
 	[Header("Normal Expansion")]
 	// nothing parameters here, it is per object based.
@@ -63,23 +63,26 @@ public class Demo : MonoBehaviour
 			}
 			m_PrevTech = m_Tech;
 		}
-
-        if (Item.IsLookingAtSomething)
+        for (int i = 0; i < Item.Length; i++)
         {
-            //Debug.Log("hi");
-            OnSelectedGameObjectChange(null, Item.LookingAt);
-            float curve = Mathf.Sin(Time.time * flashingspeed);
-            m_GlowIntensity = curve / 0.5f + 5.0f;
+            if (Item[i].IsLookingAtSomething)
+            {
+                //Debug.Log("hi");
+                OnSelectedGameObjectChange(null, Item[i].LookingAt);
+                float curve = Mathf.Sin(Time.time * flashingspeed);
+                m_GlowIntensity = curve / 0.5f + 5.0f;
+            }
+            else if (!Item[i].IsLookingAtSomething)
+            {
+                //Outline fx = Player.WasLookingAt.GetComponent<Outline>();
+                OnSelectedGameObjectChange(Item[i].WasLookingAt, null);
+                //if (fx)
+                //{
+                //    fx.OutlineDisable();
+                //}
+            }
         }
-        else if (!Item.IsLookingAtSomething)
-        {
-            //Outline fx = Player.WasLookingAt.GetComponent<Outline>();
-            OnSelectedGameObjectChange(Item.WasLookingAt, null);
-            //if (fx)
-            //{
-            //    fx.OutlineDisable();
-            //}
-        }
+        
 
         if (Input.GetMouseButtonDown(1))
         {

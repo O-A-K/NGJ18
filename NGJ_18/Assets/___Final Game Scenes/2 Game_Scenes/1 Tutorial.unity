@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -453,6 +453,47 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &93947293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 93947290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc43574baf667e42a0294fd5afd753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  m_OutlineWidth: 0.02
+  m_OutlineFactor: 0
+  m_WriteZ: 1
+  m_BasedOnVertexColorR: 0
+  m_OutlineOnly: 0
+  m_OverlayColor: {r: 1, g: 0, b: 0, a: 1}
+  m_Overlay: 0
+  m_OverlayFlash: 0
+  m_OverlayFlashSpeed: 3
+  m_BackupMats: []
+  m_Rd: {fileID: 0}
+  m_SdrOutlineOnly: {fileID: 0}
+  m_SdrOutlineDiffuse: {fileID: 0}
+  m_SdrOriginal: {fileID: 0}
+--- !u!114 &93947294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 93947290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PC: {fileID: 0}
+  LookingAt: {fileID: 0}
+  WasLookingAt: {fileID: 0}
+  IsLookingAtSomething: 0
 --- !u!1 &199325864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,6 +1857,47 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &705836942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705836939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc43574baf667e42a0294fd5afd753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  m_OutlineWidth: 0.02
+  m_OutlineFactor: 0
+  m_WriteZ: 1
+  m_BasedOnVertexColorR: 0
+  m_OutlineOnly: 0
+  m_OverlayColor: {r: 1, g: 0, b: 0, a: 1}
+  m_Overlay: 0
+  m_OverlayFlash: 0
+  m_OverlayFlashSpeed: 3
+  m_BackupMats: []
+  m_Rd: {fileID: 0}
+  m_SdrOutlineOnly: {fileID: 0}
+  m_SdrOutlineDiffuse: {fileID: 0}
+  m_SdrOriginal: {fileID: 0}
+--- !u!114 &705836943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705836939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PC: {fileID: 0}
+  LookingAt: {fileID: 0}
+  WasLookingAt: {fileID: 0}
+  IsLookingAtSomething: 0
 --- !u!4 &715759393 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 61d705f54abcb22418f603896aef859d, type: 3}
@@ -3539,6 +3621,7 @@ GameObject:
   - component: {fileID: 1593536297}
   - component: {fileID: 1593536296}
   - component: {fileID: 1593536295}
+  - component: {fileID: 1593536301}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3634,6 +3717,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456e26740891ed84994bf96225bfbdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1593536301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593536294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0795eeed68f4f1c48a705de92dd90730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Tech: 1
+  Item:
+  - {fileID: 705836943}
+  - {fileID: 2135737245}
+  - {fileID: 93947294}
+  flashingspeed: 4
+  m_SdrGlowFlatColor: {fileID: 4800000, guid: 2d1134b668e197946be16f33c53cc405, type: 3}
+  m_SdrDepthOnly: {fileID: 4800000, guid: 0da1445cbd54de4469a993d48be9f058, type: 3}
+  m_MatGlowHalo: {fileID: 2100000, guid: 2e476f211c764af4694816c1e26a1db2, type: 2}
+  m_MatGlowBlur: {fileID: 2100000, guid: d7c4410e77557a849a5459b3771b98e0, type: 2}
+  m_Obstacle: 1
+  m_IteratorTimes: 1
+  m_BlurPixelOffset: 2.2
+  m_GlowIntensity: 6
+  m_Outlines:
+  - {fileID: 705836942}
+  - {fileID: 2135737244}
+  - {fileID: 93947293}
 --- !u!1001 &1628420093
 Prefab:
   m_ObjectHideFlags: 0
@@ -4875,6 +4987,47 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2135737244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135737241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc43574baf667e42a0294fd5afd753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  m_OutlineWidth: 0.02
+  m_OutlineFactor: 0
+  m_WriteZ: 1
+  m_BasedOnVertexColorR: 0
+  m_OutlineOnly: 0
+  m_OverlayColor: {r: 1, g: 0, b: 0, a: 1}
+  m_Overlay: 0
+  m_OverlayFlash: 0
+  m_OverlayFlashSpeed: 3
+  m_BackupMats: []
+  m_Rd: {fileID: 0}
+  m_SdrOutlineOnly: {fileID: 0}
+  m_SdrOutlineDiffuse: {fileID: 0}
+  m_SdrOriginal: {fileID: 0}
+--- !u!114 &2135737245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135737241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PC: {fileID: 0}
+  LookingAt: {fileID: 0}
+  WasLookingAt: {fileID: 0}
+  IsLookingAtSomething: 0
 --- !u!4 &2142534250 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: aa965b89a9d9cb2449191d66e81902dd, type: 3}
