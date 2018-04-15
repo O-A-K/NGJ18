@@ -67,8 +67,8 @@ public class Demo : MonoBehaviour
         {
             if (Item[i].IsLookingAtSomething)
             {
-                //Debug.Log("hi");
-                OnSelectedGameObjectChange(null, Item[i].LookingAt);
+                //Debug.Log(Item[i].name);
+                OnSelectedGameObjectChange(Item[i].WasLookingAt, Item[i].LookingAt);
                 float curve = Mathf.Sin(Time.time * flashingspeed);
                 m_GlowIntensity = curve / 0.5f + 5.0f;
             }

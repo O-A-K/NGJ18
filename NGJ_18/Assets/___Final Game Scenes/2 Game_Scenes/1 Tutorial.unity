@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 2
   PC: {fileID: 0}
   LookingAt: {fileID: 0}
   WasLookingAt: {fileID: 0}
@@ -1888,6 +1889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   PC: {fileID: 0}
   LookingAt: {fileID: 0}
   WasLookingAt: {fileID: 0}
@@ -5024,6 +5026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9f7132875f4f34ea08d7a95cead4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   PC: {fileID: 0}
   LookingAt: {fileID: 0}
   WasLookingAt: {fileID: 0}

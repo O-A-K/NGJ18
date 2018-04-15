@@ -19,15 +19,17 @@ public class PickingThingsUp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (playerNumber == 0)
-        {
-            Debug.LogError("Player number asshat");
-        }
+        //if (playerNumber == 0)
+        //{
+        //    Debug.LogError("Player number asshat");
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(pcInside);
+        InRangeOfSwitch();
         #region
         //int layermask = 1 << 8;
         //RaycastHit hit;
@@ -60,31 +62,72 @@ public class PickingThingsUp : MonoBehaviour
         //    }
         //}
         #endregion
+        if (pcInside)
+        {
+            IsLookingAtSomething = true;
+        }
+        else if (!pcInside)
+        {
+            IsLookingAtSomething = false;
+        }
         if (IsLookingAtSomething)
         {
-            //LookingAt = this.transform.gameObject;
-            //Debug.Log("I am looking at " + LookingAt);
-            if (Input.GetKeyDown(KeyCode.L) && !CarryingObject)
+            if (playerNumber == 1)
             {
-                Debug.Log("Picked up");
-                CarryingObject = true;
-                this.transform.parent = PC.transform;
-                CarriedObject = this.transform.gameObject;
+                LookingAt = this.transform.gameObject;
+                PC = GameManager.gm.PlayerOne.transform.gameObject;
+                WasLookingAt = null;
             }
-            else if (Input.GetKeyDown(KeyCode.L) && CarryingObject)
+            else if (!pcInside && playerNumber == 2)
             {
-                Debug.Log("Dropped Object");
-                CarryingObject = false;
-                CarriedObject.transform.parent = null;
+                LookingAt = this.transform.gameObject;
+                PC = GameManager.gm.PlayerTwo.transform.gameObject;
+                WasLookingAt = null;
             }
         }
         else if (!IsLookingAtSomething)
         {
-            //WasLookingAt = LookingAt;
-            LookingAt = null;
-
-            //Debug.Log("I was looking at " + WasLookingAt);
+            if (playerNumber == 1)
+            {
+                WasLookingAt = this.transform.gameObject;
+                IsLookingAtSomething = false;
+                LookingAt = null;
+            }
+            else if (playerNumber == 2)
+            {
+                WasLookingAt = this.transform.gameObject;
+                IsLookingAtSomething = false;
+                LookingAt = null;
+            }
         }
+        
+        #region
+        //if (IsLookingAtSomething)
+        //{
+        //    //LookingAt = this.transform.gameObject;
+        //    //Debug.Log("I am looking at " + LookingAt);
+        //    if (Input.GetKeyDown(KeyCode.L) && !CarryingObject)
+        //    {
+        //        Debug.Log("Picked up");
+        //        CarryingObject = true;
+        //        this.transform.parent = PC.transform;
+        //        CarriedObject = this.transform.gameObject;
+        //    }
+        //    else if (Input.GetKeyDown(KeyCode.L) && CarryingObject)
+        //    {
+        //        Debug.Log("Dropped Object");
+        //        CarryingObject = false;
+        //        CarriedObject.transform.parent = null;
+        //    }
+        //}
+        //else if (!IsLookingAtSomething)
+        //{
+        //    //WasLookingAt = LookingAt;
+        //    LookingAt = null;
+
+        //    //Debug.Log("I was looking at " + WasLookingAt);
+        //}
+#endregion
     }
 
     bool InRangeOfSwitch()
@@ -93,17 +136,10 @@ public class PickingThingsUp : MonoBehaviour
         {
             if ((GameManager.gm.PlayerOne.transform.position - transform.position).sqrMagnitude <= 2.25f)
             {
-                LookingAt = this.transform.gameObject;
-                PC = GameManager.gm.PlayerOne.transform.gameObject;
-                WasLookingAt = null;
-                IsLookingAtSomething = true;
                 return pcInside = true;
             }
             else
             {
-                WasLookingAt = this.transform.gameObject;
-                IsLookingAtSomething = false;
-                LookingAt = null;
                 return pcInside = false;
             }
         }
@@ -111,17 +147,10 @@ public class PickingThingsUp : MonoBehaviour
         {
             if ((GameManager.gm.PlayerTwo.transform.position - transform.position).sqrMagnitude <= 2.25f)
             {
-                LookingAt = this.transform.gameObject;
-                PC = GameManager.gm.PlayerTwo.transform.gameObject;
-                WasLookingAt = null;
-                IsLookingAtSomething = true;
                 return pcInside = true;
             }
             else
             {
-                WasLookingAt = this.transform.gameObject;
-                IsLookingAtSomething = false;
-                LookingAt = null;
                 return pcInside = false;
             }
         }
