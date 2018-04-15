@@ -17,3 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/___Final Game Scenes/2 Game_Scenes/2 Cart Learning.unity
     guid: 3339d40932a18a94c91c369b002643bf
+  - enabled: 1
+    path: Assets/___Final Game Scenes/2 Game_Scenes/3 Cart & Walls.unity
+    guid: df850c29dcea2e448861d32ac5466fe3
+  - enabled: 1
+    path: Assets/___Final Game Scenes/2 Game_Scenes/4 A Little More Complex.unity
+    guid: ed8c979558e00dd4a8025362f3a0b1c6

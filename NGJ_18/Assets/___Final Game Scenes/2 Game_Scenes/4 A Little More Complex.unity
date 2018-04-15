@@ -613,6 +613,7 @@ MonoBehaviour:
   openPosition: {fileID: 1662240979}
   closedPosition: {fileID: 1662240978}
   doorBlock: {fileID: 1662240977}
+  electricShock: {fileID: 0}
 --- !u!33 &106401870
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1226,6 +1227,7 @@ MonoBehaviour:
   openPosition: {fileID: 1922533391}
   closedPosition: {fileID: 1922533390}
   doorBlock: {fileID: 1922533389}
+  electricShock: {fileID: 0}
 --- !u!33 &288808088
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4289,6 +4291,7 @@ MonoBehaviour:
   openPosition: {fileID: 2130070069}
   closedPosition: {fileID: 2130070068}
   doorBlock: {fileID: 2130070067}
+  electricShock: {fileID: 0}
 --- !u!33 &1138029046
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4572,6 +4575,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_index: 26
+--- !u!1001 &1209242812
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.4472147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.886141
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.891895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412082437336086, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 728a46cd2ccfc334e82bf6453da52cf5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1213116263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,6 +4760,7 @@ MonoBehaviour:
   openPosition: {fileID: 200923136}
   closedPosition: {fileID: 200923135}
   doorBlock: {fileID: 200923134}
+  electricShock: {fileID: 0}
 --- !u!33 &1213116268
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6243,6 +6289,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_index: 2
+--- !u!1001 &1620354188
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481378164175544, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883930772738800, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883930772738800, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883930772738800, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796092446223556, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796092446223556, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.69
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a6800820537ca4d4b8f4ef55c0fefee2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1622982588
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,7 +7585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 1a07000000000000
+  m_persistentVersions: 1d07000000000000
   m_modes: 02000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -8039,6 +8151,7 @@ MonoBehaviour:
   openPosition: {fileID: 1056766905}
   closedPosition: {fileID: 1056766904}
   doorBlock: {fileID: 1056766903}
+  electricShock: {fileID: 0}
 --- !u!33 &1963584578
 MeshFilter:
   m_ObjectHideFlags: 0
