@@ -16,15 +16,9 @@ public class DoorTransition : MonoBehaviour
 
     public TextMesh message;
 
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
-        if (pcInside)
+        if (GameManager.gm.PlayerOne && GameManager.gm.PlayerTwo && InRangeOfDoor())
         {
             ShowMessage();
 
@@ -45,6 +39,37 @@ public class DoorTransition : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    bool InRangeOfDoor()
+    {
+        if (playerNumber == 1)
+        {
+            if ((GameManager.gm.PlayerOne.transform.position - transform.position).sqrMagnitude <= 4)
+            {
+                return pcInside = true;
+            }
+            else
+            {
+                return pcInside = pcReady = false;
+            }
+        }
+        else if (playerNumber == 2)
+        {
+            if ((GameManager.gm.PlayerTwo.transform.position - transform.position).sqrMagnitude <= 4)
+            {
+                return pcInside = true;
+            }
+            else
+            {
+                return pcInside = pcReady = false;
+            }
+        }
+        else
+        {
+            Debug.LogError("Something about player number");
+            return false;
         }
     }
 
@@ -80,20 +105,20 @@ public class DoorTransition : MonoBehaviour
         message.gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 9)
-        {
-            pcInside = true;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.layer == 9)
+    //    {
+    //        pcInside = true;
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == 9)
-        {
-            pcInside = pcReady = false;
-            HideMessage();
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.layer == 9)
+    //    {
+    //        pcInside = pcReady = false;
+    //        HideMessage();
+    //    }
+    //}
 }

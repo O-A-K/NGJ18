@@ -1216,7 +1216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1257026197
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,6 +1248,8 @@ MonoBehaviour:
   fadeOutLength: 0.5
   fadeInLength: 0.5
   minimumLoadingScreenTime: 1.5
+  blobbyPrefab: {fileID: 114791998883220476, guid: 2a967fc441f49094bac38c1a22551801,
+    type: 2}
   PlayerOne: {fileID: 0}
   PlayerTwo: {fileID: 0}
   screenFadeSFX: {fileID: 82616568606369066, guid: 2cb2dede039dc984b81db84d58a1cc29,

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class JC_Move : MonoBehaviour
 {
+    public int playerNumber;
     [HideInInspector] public Rigidbody rb1;
     [HideInInspector] public Rigidbody rb2;
 
@@ -13,10 +14,8 @@ public class JC_Move : MonoBehaviour
     [HideInInspector]
     public NavMeshAgent agent2;
 
-    [SerializeField] private float speed;
-    [SerializeField] private float drag;
-
-    private GameManager manager;
+    public float speed;
+    public float drag;
 
     [HideInInspector] public bool isMovingOne;
     [HideInInspector] public bool isMovingTwo;
@@ -26,13 +25,17 @@ public class JC_Move : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        manager = FindObjectOfType<GameManager>();
+        if (GameManager.gm.PlayerOne)
+        {
+            rb1 = GameManager.gm.PlayerOne.GetComponent<Rigidbody>();
+            agent1 = GameManager.gm.PlayerOne.GetComponent<NavMeshAgent>();
+        }
 
-        rb1 = manager.PlayerOne.GetComponent<Rigidbody>();
-        rb2 = manager.PlayerTwo.GetComponent<Rigidbody>();
-
-        agent1 = manager.PlayerOne.GetComponent<NavMeshAgent>();
-        agent2 = manager.PlayerTwo.GetComponent<NavMeshAgent>();
+        if (GameManager.gm.PlayerTwo)
+        {
+            rb2 = GameManager.gm.PlayerTwo.GetComponent<Rigidbody>();
+            agent2 = GameManager.gm.PlayerTwo.GetComponent<NavMeshAgent>();
+        }
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class JC_Move : MonoBehaviour
 
     private void GetInput()
     {
-        if (manager.PlayerOne)
+        if (GameManager.gm.PlayerOne)
         {
             if (Input.GetAxis("Horizontal1") > 0 || Input.GetAxis("Vertical1") > 0 || Input.GetAxis("Horizontal1") < 0 || Input.GetAxis("Vertical1") < 0)
             {
@@ -63,7 +66,7 @@ public class JC_Move : MonoBehaviour
             } 
         }
 
-        if (manager.PlayerTwo)
+        if (GameManager.gm.PlayerTwo)
         {
             if (Input.GetAxis("Horizontal2") > 0 || Input.GetAxis("Vertical2") > 0 || Input.GetAxis("Horizontal2") < 0 || Input.GetAxis("Vertical2") < 0)
             {
@@ -82,7 +85,5 @@ public class JC_Move : MonoBehaviour
                 isMovingTwo = false;
             }
         }
-
-        
     }
 }

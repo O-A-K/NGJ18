@@ -35,7 +35,10 @@ public class GameManager : MonoBehaviour
     float minimumLoadingScreenTime;
 
     // PCs
+    public JC_Move blobbyPrefab;
+    //[HideInInspector]
     public JC_Move PlayerOne;
+    //[HideInInspector]
     public JC_Move PlayerTwo;
 
     // Audio
@@ -113,12 +116,25 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        //SceneManager.LoadScene(sceneIndex);
+        //inTransition = true;
+        //StartCoroutine(FadeScreen());           // once level is loaded, fade out of loading screen
+        //while (inTransition)                    // wait for loading screen to fade out then go to new scene
+        //{
+        //    yield return null;
+        //}
+
         currentScene = sceneIndex;
 
         if (currentScene > 1)
         {
             //AudioSource sfx = Instantiate(arrivingLevelSFX, transform);
             //Destroy(sfx.gameObject, 10);
+
+            PlayerOne = Instantiate(blobbyPrefab, Spawner.spawner.spawnPointPlayerOne.transform.position, Quaternion.identity);
+            PlayerOne.playerNumber = 1;
+            PlayerTwo = Instantiate(blobbyPrefab, Spawner.spawner.spawnPointPlayerTwo.transform.position, Quaternion.identity);
+            PlayerOne.playerNumber = 2;
         }
         inTransition = true;                            // fade into new scene
         StartCoroutine(FadeScreen());

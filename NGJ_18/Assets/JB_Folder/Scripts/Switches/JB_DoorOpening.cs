@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JB_DoorOpening : MonoBehaviour
 {
-    bool isMoving;
+    public bool isMoving;
     [Header("Lerping")]
     [SerializeField]
     public AnimationCurve openingMotion;
@@ -16,8 +16,8 @@ public class JB_DoorOpening : MonoBehaviour
     float closingLength;
 
     [Header("Positioning")]
-    [SerializeField]
-    bool isOpen;
+    //[SerializeField]
+    public bool isOpen;
     [SerializeField]
     Transform openPosition;
     [SerializeField]
@@ -33,7 +33,7 @@ public class JB_DoorOpening : MonoBehaviour
         if (!isMoving)
         {
             isMoving = true;
-            StartCoroutine(MoveDoor());
+            StartCoroutine("MoveDoor");
         }
     }
 

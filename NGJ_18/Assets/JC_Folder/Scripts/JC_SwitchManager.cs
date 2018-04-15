@@ -23,11 +23,11 @@ public class JC_SwitchManager : MonoBehaviour
 
             foreach (JC_Switch Switch in allSwiches)
             {
-
-                Switch.isOn = false;
+                //Switch.isOn = false;
                 Switch.HasBroken();
-
+                Switch.breakerDelay = 1;
             }
+
             onCounter = 0;
         }
     }

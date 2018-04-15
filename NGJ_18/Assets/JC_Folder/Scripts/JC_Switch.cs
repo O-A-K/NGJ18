@@ -5,6 +5,8 @@ using UnityEngine;
 public class JC_Switch : MonoBehaviour
 {
     public bool isOn = false;
+    bool breakerBitch;
+    bool isBroken;
 
     public int player;
 
@@ -19,6 +21,7 @@ public class JC_Switch : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        breakerBitch = isOn;
         switchManager = FindObjectOfType<JC_SwitchManager>();
     }
 
@@ -35,37 +38,48 @@ public class JC_Switch : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(GameManager.gm.PlayerOne.gameObject.transform.position, gameObject.transform.position) <= 2)
+        if (GameManager.gm.PlayerOne && GameManager.gm.PlayerTwo && !isBroken)
         {
-            print("We're in 1");
-            // Player1 Interacted with Trigger
-            pc1IsInside = true;
-        }
+            if (Vector3.Distance(GameManager.gm.PlayerOne.gameObject.transform.position, gameObject.transform.position) <= 2)
+            {
+                print("We're in 1");
+                // Player1 Interacted with Trigger
+                pc1IsInside = true;
+            }
 
-        else
-        {
-            pc1IsInside = false;
-        }
+            else
+            {
+                pc1IsInside = false;
+            }
 
-
-        if (Vector3.Distance(GameManager.gm.PlayerTwo.gameObject.transform.position, gameObject.transform.position) <= 2)
-        {
-            print("We're in 2");
-            // Player1 Interacted with Trigger
-            pc2IsInside = true;
-        }
-        else
-        {
-            pc2IsInside = false;
+            if (Vector3.Distance(GameManager.gm.PlayerTwo.gameObject.transform.position, gameObject.transform.position) <= 2)
+            {
+                print("We're in 2");
+                // Player1 Interacted with Trigger
+                pc2IsInside = true;
+            }
+            else
+            {
+                pc2IsInside = false;
+            }
         }
 
     }
     void DoorInteract()
     {
-        doorOpening.DoorInteract();
+        if (!doorOpening.isMoving)
+        {
+            doorOpening.DoorInteract();
+            isBroken = false;
+        }
     }
+
     public void HasBroken()
     {
-        Invoke("DoorInteract", breakerDelay);
+        if (isOn != breakerBitch)
+        {
+            isBroken = true;
+            Invoke("DoorInteract", breakerDelay);
+        }
     }
 }

@@ -13,16 +13,8 @@ public class MainMenuLogic : MonoBehaviour
     bool readyPlayerOne = false;
     bool readyPlayerTwo = false;
     bool sceneChanged;
-    // Use this for initialization
-    void Start()
-    {
-        if (!sceneChanged && readyPlayerOne && readyPlayerTwo)
-        {
-            Invoke("SwitchScene", .5f);
-        }
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetButtonDown("A1"))
@@ -33,8 +25,16 @@ public class MainMenuLogic : MonoBehaviour
 
         if (Input.GetButtonDown("A2"))
         {
-            readyPlayerOne = true;
-            playerOneReady.gameObject.SetActive(true);
+            readyPlayerTwo = true;
+            playerTwoReady.gameObject.SetActive(true);
+            //GameManager.gm.PlayerTwo = Instantiate(GameManager.gm.blobbyPrefab, GameManager.gm.transform);
+            //GameManager.gm.PlayerOne = Instantiate(GameManager.gm.blobbyPrefab, GameManager.gm.transform);
+        }
+
+        if (!sceneChanged && readyPlayerOne && readyPlayerTwo)
+        {
+            sceneChanged = true;
+            Invoke("SwitchScene", .5f);
         }
     }
 
