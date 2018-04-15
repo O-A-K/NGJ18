@@ -23,6 +23,8 @@ public class JB_DoorOpening : MonoBehaviour
     [SerializeField]
     Transform closedPosition;
 
+    public GameObject doorBlock;
+
     void Start()
     {
         transform.position = isOpen ? openPosition.position : closedPosition.position;
@@ -51,9 +53,9 @@ public class JB_DoorOpening : MonoBehaviour
             {
                 transform.position = Vector3.LerpUnclamped(openPosition.position, closedPosition.position, closingMotion.Evaluate(progress));
             }
-
             else
             {
+                doorBlock.gameObject.SetActive(true);
                 transform.position = Vector3.LerpUnclamped(closedPosition.position, openPosition.position, openingMotion.Evaluate(progress));
             }
 
@@ -61,6 +63,11 @@ public class JB_DoorOpening : MonoBehaviour
             {
                 isOpen = !isOpen;
                 isMoving = false;
+            }
+
+            if (isOpen)
+            {
+                doorBlock.gameObject.SetActive(false);
             }
 
             yield return null;
