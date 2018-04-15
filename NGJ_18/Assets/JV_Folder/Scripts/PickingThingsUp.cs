@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PickingThingsUp : MonoBehaviour
 {
+    public int playerNumber = 0;
     public GameObject PC;
     public GameObject LookingAt;
     public GameObject WasLookingAt;
+    bool pcInside;
     [HideInInspector]
     public bool IsLookingAtSomething;
     [HideInInspector]
@@ -17,7 +19,10 @@ public class PickingThingsUp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        if (playerNumber == 0)
+        {
+            Debug.LogError("Player number asshat");
+        }
     }
 
     // Update is called once per frame
@@ -82,24 +87,69 @@ public class PickingThingsUp : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider Player)
+    bool InRangeOfSwitch()
     {
-        LookingAt = this.transform.gameObject;
-        PC = Player.transform.gameObject;
-        WasLookingAt = null;
-        IsLookingAtSomething = true;
+        if (playerNumber == 1)
+        {
+            if ((GameManager.gm.PlayerOne.transform.position - transform.position).sqrMagnitude <= 2.25f)
+            {
+                LookingAt = this.transform.gameObject;
+                PC = GameManager.gm.PlayerOne.transform.gameObject;
+                WasLookingAt = null;
+                IsLookingAtSomething = true;
+                return pcInside = true;
+            }
+            else
+            {
+                WasLookingAt = this.transform.gameObject;
+                IsLookingAtSomething = false;
+                LookingAt = null;
+                return pcInside = false;
+            }
+        }
+        else if (playerNumber == 2)
+        {
+            if ((GameManager.gm.PlayerTwo.transform.position - transform.position).sqrMagnitude <= 2.25f)
+            {
+                LookingAt = this.transform.gameObject;
+                PC = GameManager.gm.PlayerTwo.transform.gameObject;
+                WasLookingAt = null;
+                IsLookingAtSomething = true;
+                return pcInside = true;
+            }
+            else
+            {
+                WasLookingAt = this.transform.gameObject;
+                IsLookingAtSomething = false;
+                LookingAt = null;
+                return pcInside = false;
+            }
+        }
+        else
+        {
+            Debug.LogError("S0mething about playernumber");
+            return false;
+        }
     }
+
+    //void OnTriggerStay(Collider Player)
+    //{
+    //    LookingAt = this.transform.gameObject;
+    //    PC = Player.transform.gameObject;
+    //    WasLookingAt = null;
+    //    IsLookingAtSomething = true;
+    //}
 
     //void OnTriggerEnter(Collider Player)
     //{
     //    IsLookingAtSomething = true;
     //}
 
-    void OnTriggerExit(Collider Player)
-    {
-        WasLookingAt = this.transform.gameObject;
-        IsLookingAtSomething = false;
-        LookingAt = null;
-    }
+    //void OnTriggerExit(Collider Player)
+    //{
+    //    WasLookingAt = this.transform.gameObject;
+    //    IsLookingAtSomething = false;
+    //    LookingAt = null;
+    //}
 
 }
