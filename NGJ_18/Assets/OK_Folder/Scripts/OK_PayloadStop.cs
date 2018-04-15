@@ -21,10 +21,12 @@ public class OK_PayloadStop : MonoBehaviour {
     private void OnTriggerEnter(Collider cl_other)
     {
         GO_Cart.GetComponent<Battlehub.SplineEditor.SplineFollow>().IsRunning = false;
+        print("I am a Stop");
     }
 
     private void OnTriggerExit(Collider cl_other)
     {
         GO_Cart.GetComponent<Battlehub.SplineEditor.SplineFollow>().IsRunning = true;
+        print("I am a Go");
     }
 }
