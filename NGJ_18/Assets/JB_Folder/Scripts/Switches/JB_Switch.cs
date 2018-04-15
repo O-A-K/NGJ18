@@ -14,7 +14,9 @@ public class JB_Switch : MonoBehaviour
 
     public float brokenTimeout = 2;
     float brokenTime;
-    // Use this for initialization
+
+    ParticleSystem sparks;
+
     void Start()
     {
         if (playerNumber == 0)
@@ -47,6 +49,9 @@ public class JB_Switch : MonoBehaviour
             {
                 Switching();
             }
+
+            sparks.gameObject.SetActive(false);
+            door.electricShock.gameObject.SetActive(false);
         }
     }
 
@@ -102,6 +107,8 @@ public class JB_Switch : MonoBehaviour
         {
             door.DoorInteract();
         }
+        sparks.gameObject.SetActive(true);
+        door.electricShock.gameObject.SetActive(true);
         isOn = false;
         isBroken = true;
         brokenTime = Time.time + brokenTimeout;

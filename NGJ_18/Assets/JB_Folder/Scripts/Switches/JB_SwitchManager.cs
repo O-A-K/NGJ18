@@ -64,6 +64,8 @@ public class JB_SwitchManager : MonoBehaviour
 
     IEnumerator LightFlash()
     {
+        yield return new WaitForSeconds(.75f);
+
         float progress = 0;
         float timer = 0;
         float lightLerp = 1.5f;
