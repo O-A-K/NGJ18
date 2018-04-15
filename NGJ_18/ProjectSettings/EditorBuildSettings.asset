@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/JB_Folder/Scenes/Main Menu.unity
     guid: 4f059ac15ce7276408c60b093b3a6490
-  - enabled: 1
+  - enabled: 0
     path: Assets/JB_Folder/Scenes/Loading Screen.unity
     guid: 45d34bcb79cbe48459e247d637d9f46a
+  - enabled: 1
+    path: Assets/SU_Folder/2 Cart Learning 1.unity
+    guid: a3f9993dc1aaff24f8f2279ab50f6136

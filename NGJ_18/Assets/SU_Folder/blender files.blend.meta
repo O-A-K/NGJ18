@@ -44,6 +44,22 @@ ModelImporter:
     100076: Table
     100078: Keyboard
     100080: RailStart
+    100082: Cog
+    100084: Cog_001
+    100086: Cog_002
+    100088: Cog_003
+    100090: Cog_004
+    100092: Cog_005
+    100094: Cog_006
+    100096: Cog_007
+    100098: Cog_008
+    100100: Cog_009
+    100102: Cog_010
+    100104: Plane
+    100106: Cube_002
+    100108: Cube_003
+    100110: Cube_004
+    100112: RailSmall
     400000: //RootNode
     400002: Cart
     400004: CartGlassCylinder
@@ -85,6 +101,22 @@ ModelImporter:
     400076: Table
     400078: Keyboard
     400080: RailStart
+    400082: Cog
+    400084: Cog_001
+    400086: Cog_002
+    400088: Cog_003
+    400090: Cog_004
+    400092: Cog_005
+    400094: Cog_006
+    400096: Cog_007
+    400098: Cog_008
+    400100: Cog_009
+    400102: Cog_010
+    400104: Plane
+    400106: Cube_002
+    400108: Cube_003
+    400110: Cube_004
+    400112: RailSmall
     2100000: unnamed
     2100002: Material_001
     2100004: Material
@@ -132,6 +164,22 @@ ModelImporter:
     2300074: Table
     2300076: Keyboard
     2300078: RailStart
+    2300080: Cog
+    2300082: Cog_001
+    2300084: Cog_002
+    2300086: Cog_003
+    2300088: Cog_004
+    2300090: Cog_005
+    2300092: Cog_006
+    2300094: Cog_007
+    2300096: Cog_008
+    2300098: Cog_009
+    2300100: Cog_010
+    2300102: Plane
+    2300104: Cube_002
+    2300106: Cube_003
+    2300108: Cube_004
+    2300110: RailSmall
     3300000: Cart
     3300002: CartGlassCylinder
     3300004: CartRollers
@@ -172,6 +220,22 @@ ModelImporter:
     3300074: Table
     3300076: Keyboard
     3300078: RailStart
+    3300080: Cog
+    3300082: Cog_001
+    3300084: Cog_002
+    3300086: Cog_003
+    3300088: Cog_004
+    3300090: Cog_005
+    3300092: Cog_006
+    3300094: Cog_007
+    3300096: Cog_008
+    3300098: Cog_009
+    3300100: Cog_010
+    3300102: Plane
+    3300104: Cube_002
+    3300106: Cube_003
+    3300108: Cube_004
+    3300110: RailSmall
     4300000: Wall1
     4300002: Wall2
     4300004: Wall3
@@ -212,6 +276,22 @@ ModelImporter:
     4300074: SwitchBase
     4300076: RailStart
     4300078: Keyboard
+    4300080: Plane
+    4300082: Cog_010
+    4300084: Cog_009
+    4300086: Cog_008
+    4300088: Cog_007
+    4300090: Cog_006
+    4300092: Cog_005
+    4300094: Cog_004
+    4300096: Cog_003
+    4300098: Cog_002
+    4300100: Cog_001
+    4300102: Cog
+    4300104: Cube_004
+    4300106: Cube_003
+    4300108: Cube_002
+    4300110: RailSmall
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
