@@ -15,7 +15,7 @@ public class JB_Switch : MonoBehaviour
     public float brokenTimeout = 2;
     float brokenTime;
 
-    ParticleSystem sparks;
+    public ParticleSystem sparks;
 
     void Start()
     {
@@ -50,8 +50,8 @@ public class JB_Switch : MonoBehaviour
                 Switching();
             }
 
-            sparks.gameObject.SetActive(false);
-            door.electricShock.gameObject.SetActive(false);
+            if (sparks) sparks.gameObject.SetActive(false);
+            if (door) door.electricShock.gameObject.SetActive(false);
         }
     }
 
@@ -107,8 +107,8 @@ public class JB_Switch : MonoBehaviour
         {
             door.DoorInteract();
         }
-        sparks.gameObject.SetActive(true);
-        door.electricShock.gameObject.SetActive(true);
+        if (sparks) sparks.gameObject.SetActive(true);
+        if (door) door.electricShock.gameObject.SetActive(true);
         isOn = false;
         isBroken = true;
         brokenTime = Time.time + brokenTimeout;
